@@ -1,0 +1,580 @@
+/*General settings*/
+
+[class*="col-"] {
+  width: 100%;
+}
+
+
+body {
+  font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+}
+
+/******************************************************************************** navigation bar ******************************************************************************** */
+
+.navbuttons {
+  padding-left: 2rem;
+  display: block;
+  float: left;
+  text-decoration: none;
+}
+
+.loginsignupbutton {
+  display: block;
+  float: right;
+  margin-right: 1.25px;
+  text-decoration: none;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #92e1fd;
+  padding: 0.8rem;
+
+}
+
+.navbar a {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover {
+  background-color: #2cc7f2;
+  box-shadow: inset 2px 2px 3px rgb(102, 102, 102);
+  transition: 1s;
+}
+
+.dropdown:hover .dropbtn{
+  background-color: #2cc7f2;
+  box-shadow: inset 2px 3px rgb(102, 102, 102);
+  transition: 1s;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #17252A;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #DEF2F1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.divider{
+  padding: 5px;
+  background-color: #2cc7f2;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+/******************************************************************************** view claims page ******************************************************************************** */
+
+.filescontainer {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.files {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+}
+
+embed {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: auto;
+  height: auto;
+}
+
+/*Claim form*/
+
+.claimform {
+  background-color: rgba(92, 92, 92, 0.467) ;
+  width: 80%;
+  height: auto;
+  margin: 0 10% 0 10%;
+}
+
+.formbox {
+  text-align: center;
+  width: 80%;
+  height: 50rem;
+  margin: 0% 10% 0% 10%; 
+  padding: 10px 0 0 0;
+  background-color: rgba(38, 37, 37, 0.576);
+}
+
+/******************************************************************************** Home page ******************************************************************************** */
+
+/* Flip Cards */
+
+
+
+.flip-card {
+  display: inline-block;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: transparent;
+  width: 30%;
+  height: 300px;
+  perspective: 1000px; 
+  transform: translate(4%, 0%);
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+
+}
+
+
+.flip-card-front {
+  background-color: #DEF2F1;
+  color: #17252A;
+  background-image: url("/src/images/homepage-background.jpg");
+  background-position: center;
+}
+
+
+.flip-card-back {
+  background-color: #2cc7f2;
+  color: white;
+  transform: rotateY(180deg);
+  
+}
+
+.card-text{
+  margin: 25px;
+  font-size: 20px;
+
+  
+}
+
+.icon-img{
+  width: 112px;
+  text-align: right;
+  float: center;
+  padding-left: 170px;
+  margin-bottom: 10px;
+
+}
+
+.FileShield{
+  width: 112px;
+  padding-left: 170px;
+  float: center;
+
+}
+
+.card-title{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+.card-text-back{
+  padding: 25px;
+}
+
+.card-section{
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 80%;
+  padding-top: 130px;
+  padding-bottom: 100px;
+}
+
+
+
+/******************************************************************************** Home page title ******************************************************************************** */
+
+.home-page-section{
+  text-align: center;
+  padding: 394px;
+  background-image: url("/src/images/homepage-background.jpg");
+  background-position-y: -85px;
+  background-color: #9cdad6;
+  animation: home-transform 1.5s;
+}
+
+
+@keyframes home-transform {
+  0% {padding: 0px; opacity: 0;}
+  100% {padding: 394px; opacity: 1;}
+}
+
+.home-title{
+  font-size: 100px;
+  color: #17252A;
+  animation: home-title-animation 2s;
+  text-shadow: 2px 4px 5px rgb(139, 139, 139);
+
+}
+
+.home-description{
+  font-size: 20px;
+  color: #3a3b3b;
+  animation: home-desc-animation 2s;
+
+
+}
+
+@keyframes home-desc-animation{
+  0% { opacity: 0; font-size: 0px;}
+  70% {opacity: 0; transform: translateX(300px);}
+  80% {opacity: 0; transform: translateX(100px);font-size: 20px;}
+  100% {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes home-title-animation {
+  0% {opacity: 0; font-size: 0px;}
+  50% {opacity: 0; transform: translateY(-100px); font-size: 100px;}
+  100% {opacity: 1; transform: translateY(0px);}
+}
+
+/* Footer */
+.footer{
+  padding: 50px;
+  background-color: #17252A;
+}
+
+
+/* HOME MOBILE PAGE */
+
+@media (max-width: 500px){
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #8dd2eb;
+    padding: 0.8rem;
+  
+  }
+  
+  .navbar a {
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 12px;  
+  }
+  
+  
+  .dropdown-content a {
+    float: none;
+    color: #17252A;
+    padding: 12px 16px;
+    text-align: left;
+
+  }
+  .flip-card{
+    width: 250px;
+    height: 200px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    } 
+
+    .card-text{
+      padding: 2px;
+    }
+  
+    .home-page-section{
+      padding: 100px;
+      background-position: left;
+      animation: transform 1s;
+    }
+
+    @keyframes transform {
+      from {padding: 0px; opacity: 0;}
+      to {padding: 100px; opacity: 1;}
+    }
+  
+    .home-description{
+      font-size: 10px;
+    }
+ 
+    .home-title{
+      font-size: 50px;
+    }
+
+    @keyframes home-title-animation {
+      0% {opacity: 0;}
+      50% {opacity: 0; transform: translateY(-100px);}
+      100% {opacity: 1; transform: translateY(0px);}
+    }
+
+    @keyframes home-desc-animation{
+      0% { opacity: 0;}
+      70% {opacity: 0; transform: translateX(300px);}
+      80% {opacity: 0; transform: translateX(100px);}
+      100% {opacity: 1; transform: translateX(0px);}
+    }
+
+    .flip-card{
+      transform: translate(20%, 0%);
+    }
+
+    .card-title{
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+    .icon-img{
+      width: 70px;
+      padding-left: 65px;
+    }
+
+    .FileShield{
+      width: 70px;
+      padding-left: 65px;
+    }
+
+    .card-text{
+      font-size: 14px;
+    }
+
+    .flip-card-front{
+      background-position: 10% 20%;
+    }
+
+
+}
+
+
+/******************************************************************************** About page ******************************************************************************** */
+
+.about-page{
+  padding: 0px 0px 0px 0px;
+  height: 1300px;
+  margin: 70px 300px 0px 300px;
+  box-shadow: 0px 10px 10px 10px rgba(0,0,0,0.2);
+  background-color: white;
+  animation: about-page-transform 1s;
+}
+
+@keyframes about-page-transform{
+  0% {height: 0px; margin-top:1000px;}
+  60% {height: 0px;}
+  100% {height: 845px; margin-top:70px}
+}
+
+.about-title{
+  color: #17252A;
+  padding: 70px 70px 30px 70px;
+  font-size: 50px;
+  animation: about-title-fadein 2.3s;
+}
+
+.about-body{
+  background-image: url("/src/images/homepage-background.jpg");
+  height: 1600px;
+}
+
+.about-text{
+  padding: 0px 70px;
+  color: #17252A;
+  animation: about-text-fadein 2.3s;
+}
+
+/* .htu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+} */
+
+.htu-container{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.how-to-use{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-left: 10%;
+  animation: about-text-fadein 2.3s;
+}
+
+.how-to-use h1{
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+  animation: about-text-fadein 2.3s;
+}
+
+.how-to-use img{
+  margin: 0 auto;
+  pointer-events: none;
+  width: 200px;
+}
+
+.how-to-use-r2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.how-to-use-r2 img{
+  margin: 0 auto;
+  pointer-events: none;
+  width: 200px;
+}
+
+.arrow {
+  margin-top: 150px;
+  width: 25px;
+  height: 25px;
+  border-top: 10px solid #000;
+  border-left: 10px solid #000;
+}
+
+.right {
+  transform: rotate(135deg);
+}
+
+.left {
+  transform: rotate(-45deg);
+}
+
+.down {
+  transform: rotate(225deg);
+  margin: 80px 670px;
+}
+
+@keyframes about-transform {
+  from {margin-top: 1000px; opacity: 0;}
+  to {margin-top: 70px; opacity: 1;}
+}
+
+@keyframes about-text-fadein{
+  0% {opacity: 0; transform: translateX(50px);}
+  60% {opacity: 0; transform: translateX(20px);}
+  100% {opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes about-title-fadein{
+  0% {opacity: 0; transform: translateY(-50px);}
+  50% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0px);}
+}
+
+.divider-bottom{
+  margin: 0px 300px 0px 300px;
+}
+
+/* ABOUT MOBILE PAGE */
+
+@media (max-width: 500px){
+
+  .about-page{
+    margin: 30px 30px 0px 30px;
+    animation: about-page-transform 2s;
+  }
+
+  .about-text{
+    padding: 0px 30px;
+    animation: about-text-fadein 3s;
+  }
+
+  .about-title{
+    font-size: 30px;
+    padding: 30px 30px 20px 30px;
+    animation: about-title-fadein 3s;
+  }
+
+  @keyframes about-transform{
+    from {margin-top: 600px; opacity: 0;}
+    to {margin-top: 30px; opacity: 1;}
+  }
+
+  @keyframes about-text-fadein{
+    0% {opacity: 0; transform: translateX(50px);}
+    60% {opacity: 0; transform: translateX(20px);}
+    100% {opacity: 1; transform: translateX(0px);}
+  }
+
+  @keyframes about-title-fadein{
+    0% {opacity: 0; transform: translateY(-50px);}
+    50% {opacity: 0; transform: translateY(-20px);}
+    100% {opacity: 1; transform: translateY(0px);}
+  }
+
+  .divider-bottom{
+    margin: 0px 10px 0px 30px;
+  }
+
+}
