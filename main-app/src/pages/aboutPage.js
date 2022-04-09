@@ -32,11 +32,7 @@ function AboutPage ()  {
 
     return ( 
         <html>
-          <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-          </head>
           <body class="about-body">
-
               <nav className="navbar">
                 <Link className='navbuttons' to="/" >Home</Link>
                 <Link className='navbuttons' to="/about" >About</Link>
@@ -53,49 +49,69 @@ function AboutPage ()  {
               </nav>
               <div class="divider"></div>
 
-              <div class="about-main-container">
-                <div class="about-page">
-                  <div class="divider"></div>
-                  <h1 class="about-title">About</h1>
-                  <p class="about-text">ClaimIt is a web application to simplify the process of managing expense claims for managers and employees.</p>
-                  <h1 class="about-title">How to use</h1>
-                  {/* <div class="htu"> */}
-                  <div class="htu-container">
-                      <div class="how-to-use">
-                        <img src={require("../images/register.png")}></img>
-                        <h1>Sign up and get your account</h1>
-                      </div>
-                      <div class="arrow right"></div>
-                      <div class="how-to-use">
-                        <img src={require("../images/claim.png")}></img>
-                        <h1>Create and submit your expense claim</h1>
-                      </div>
-                    </div>
-                    <div class="arrow down"></div>
-                    <div class="htu-container">
-                      <div class="htu-container">
-                        <div class="how-to-use-r2">
-                          <div class="how-to-use">
-                            <img src={require("../images/manager.png")} class={"how-to-use img"} style={{marginLeft:"50%"}}></img>
-                            <h1>Wait for manager approval</h1>
-                          </div>
-                          <div class="arrow left"></div>
-                          <div class="how-to-use">
-                            <img src={require("../images/reimburse.png")}></img>
-                            <h1>Get your reimbursement</h1>
-                        </div>
-                        </div>
-                      </div>
-                    </div>
-                  {/* </div> */}
-                  {/* <img src={require('../images/register.png')} alt="Register" style={{width:150,marginLeft:100}}></img> */}
-                  <p class="about-text"></p>
+              <div class="about-page">
+                <div class="divider"></div> 
+                <div class="about-border">
+                  <p class="about-text">ClaimIt is a web application to simplify the process of managing expense claims for managers and employees
+                  </p>
                 </div>
-              <div class="divider divider-bottom"></div>
+                <div class="about-border-2">
+                  <div class="about-border-2-text">
+                    <p>No more hassle of manually submitting and waiting to create an expense report</p>
+                    <br></br>
+                    <p>Track expenses on your business trip</p>
+                  </div>
+                  <img src={require("../images/paper.jpg")}></img>
+                </div>
+                <h1 class="about-title">How to use</h1>
+                <div class="htu-container">
+                  <div class="how-to-use">
+                    <img src={require("../images/step1.png")}></img>
+                    <h1>Sign up and get your ClaimIt account or login</h1>
+                  </div>
+                  <img class="arrow down" src={require("../images/arrow.png")}></img>
+                  <div class="how-to-use">
+                    <h1>Hover over the "Claims" button on the navigation bar and choose the "Add New Claim" button</h1>
+                    <img src={require("../images/step2.png")}></img>  
+                  </div>
+                  <img class="arrow down" src={require("../images/arrow.png")}></img>
+                  <div class="how-to-use">
+                    <img src={require("../images/step3.png")}></img>
+                    <h1>Fill out the details of the claims you propose to submit</h1>
+                  </div>
+                  <img class="arrow down" src={require("../images/arrow.png")}></img>
+                  <div class="how-to-use">
+                    <img src={require("../images/step4.png")}></img>
+                    <h1>You can view your submitted claim status on the "Pending Claim" page</h1>
+                  </div>
+                  <img class="arrow down" src={require("../images/arrow.png")}></img>
+                  <div class="how-to-use">
+                    <img src={require("../images/reimburse.png")}></img>
+                    <h1>Get reimbursed</h1>
+                  </div>
+                </div>
+                <p class="about-text"></p>
+                <h1 class="about-title">Features</h1>
+                <div class="features">
+                  <ul>
+                    <li>
+                      <img src={require("../images/tick.png")}></img>
+                      <h1>Provide information and submit expense claims</h1>
+                    </li>
+                  </ul>
+                  <img src={require("../images/tick.png")}></img>
+                  <h1>Upload pictures of receipts</h1>
+                  <img src={require("../images/tick.png")}></img>
+                  <h1>Monitor status of submitted claims</h1>
+                  <img src={require("../images/tick.png")}></img>
+                  <h1>Review list of submitted claims</h1>
+                  <img src={require("../images/tick.png")}></img>
+                  <h1>Handle claim approval requests</h1>
+                  <img src={require("../images/tick.png")}></img>
+                  <h1>Do expenses when you travel</h1>
+                </div>
               </div>
-
-
-
+              <div class="divider"></div>  
           </body>
         </html>
 
